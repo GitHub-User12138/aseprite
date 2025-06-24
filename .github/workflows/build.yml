@@ -92,9 +92,10 @@ jobs:
         cd build && ninja
     - uses: actions/upload-artifact@v4
       with:
-        name: aseprite-${{ matrix.ui }}-${{ matrix.scripting }}-${{ matrix.build_type }}
+        name: aseprite-${{ runner.os }}-${{ matrix.ui }}-${{ matrix.scripting }}-${{ matrix.build_type }}
         path: |
           ${{ github.workspace }}/build/bin/data
-          ${{ github.workspace }}/build/bin/aseprite
+          ${{ github.workspace }}/build/bin/aseprite*
+
 
 
