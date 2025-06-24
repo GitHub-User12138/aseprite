@@ -94,6 +94,7 @@ jobs:
       with:
         name: aseprite-${{ matrix.ui }}-${{ matrix.scripting }}-${{ matrix.build_type }}
         path: |
-          D:/a/aseprite/aseprite/build/bin/data
-          D:/a/aseprite/aseprite/build/bin/aseprite.exe
+          ${{ github.workspace }}/build/bin/data
+          ${{ github.workspace }}/build/bin/aseprite
+
 
